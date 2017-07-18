@@ -10,11 +10,10 @@ class Task{
         return $connect;
     }
 
-    public function createTable()
+    public static function createTable()
     {
         $connection = Task::getConnection();
-        $connection->query("CREATE TABLE `test`.`tasks5` ( `id` INT NOT NULL AUTO_INCREMENT , `title` TEXT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;");
-        echo "Create table tasks4 success";
+        $connection->query("CREATE TABLE `test`.`tasks` ( `id` INT NOT NULL AUTO_INCREMENT , `title` TEXT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;");
+        echo "Create table tasks success";
     }
 }
-$create_table = Task::createTable();
